@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?language java?>
+
+<AnchorPane prefHeight="165.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/10.0.2-internal"
+            xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <VBox layoutX="121.0" layoutY="11.0" prefHeight="172.6" prefWidth="600.0" AnchorPane.bottomAnchor="0.0"
+            AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <HBox prefHeight="32.0" prefWidth="600.0">
+               <children>
+                  <TextField fx:id="dateField" prefHeight="43.0" prefWidth="165.0" promptText="Date">
+                     <HBox.margin>
+                        <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                     </HBox.margin>
+                  </TextField>
+                  <TextField fx:id="taskTextField" prefHeight="26.0" prefWidth="307.0" promptText="Task">
+                     <HBox.margin>
+                        <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                     </HBox.margin>
+                  </TextField>
+                  <CheckBox fx:id="statusField" mnemonicParsing="false" text="Done">
+                     <HBox.margin>
+                        <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                     </HBox.margin>
+                  </CheckBox>
+               </children>
+            </HBox>
+            <HBox prefHeight="116.0" prefWidth="600.0">
+               <children>
+                  <Button fx:id="saveTaskButton" mnemonicParsing="false" prefHeight="120.0" prefWidth="300.0" text="Save" />
+                  <Button fx:id="cancelButton" mnemonicParsing="false" prefHeight="120.0" prefWidth="300.0" text="Cancel" />
+               </children>
+            </HBox>
+         </children></VBox>
+   </children>
+</AnchorPane>

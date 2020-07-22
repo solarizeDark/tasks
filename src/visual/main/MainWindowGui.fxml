@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane prefHeight="172.0" prefWidth="602.0" xmlns="http://javafx.com/javafx/10.0.2-internal"
+            xmlns:fx="http://javafx.com/fxml/1" fx:controller="visual.main.MainWindowController">
+   <children>
+      <Pane layoutY="36.0" prefHeight="100.0" prefWidth="602.0">
+         <children>
+            <Button fx:id="createTaskButton" layoutX="174.0" layoutY="38.0" mnemonicParsing="false"
+                    prefHeight="25.0" prefWidth="107.0" text="Create Task" />
+            <Button fx:id="searchButton" layoutX="301.0" layoutY="38.0" mnemonicParsing="false"
+                    prefHeight="25.0" prefWidth="107.0" text="Search" />
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>

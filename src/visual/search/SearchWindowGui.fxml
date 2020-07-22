@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <VBox prefHeight="400.0" prefWidth="600.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <HBox prefHeight="62.0" prefWidth="600.0">
+               <children>
+                  <TextField fx:id="dateFromButton" prefHeight="20.0" prefWidth="170.0" promptText="Date from">
+                     <HBox.margin>
+                        <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                     </HBox.margin>
+                  </TextField>
+                  <TextField fx:id="dateToButton" prefHeight="20.0" prefWidth="170.0" promptText="Date to">
+                     <HBox.margin>
+                        <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                     </HBox.margin>
+                  </TextField>
+                  <CheckBox fx:id="statusCheckBox" mnemonicParsing="false" prefHeight="30.0" prefWidth="68.0" text="Done">
+                     <HBox.margin>
+                        <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                     </HBox.margin></CheckBox>
+                  <Button fx:id="searchButton" mnemonicParsing="false" prefHeight="34.0" prefWidth="93.0" text="Search">
+                     <HBox.margin>
+                        <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                     </HBox.margin>
+                  </Button>
+
+               </children></HBox>
+            <VBox prefHeight="378.0" prefWidth="600.0">
+               <children>
+                  <HBox prefHeight="557.0" prefWidth="600.0">
+                     <children>
+                        <TableView fx:id="tableTasks" editable="true" prefHeight="284.0" prefWidth="593.0">
+                          <columns>
+                            <TableColumn fx:id="dateColumn" prefWidth="134.80000722408295" text="Date" />
+                            <TableColumn fx:id="textColumn" prefWidth="337.60003662109375" text="Text" />
+                            <TableColumn fx:id="statusColumn" prefWidth="111.19997558593752" text="Status" />
+                          </columns>
+                           <HBox.margin>
+                              <Insets left="5.0" right="10.0" top="5.0" />
+                           </HBox.margin>
+                        </TableView>
+                     </children>
+                  </HBox>
+                  <VBox prefHeight="344.0" prefWidth="600.0">
+                     <children>
+                        <HBox prefHeight="100.0" prefWidth="200.0">
+                           <children>
+                              <Button fx:id="cancelButton" mnemonicParsing="false" prefHeight="50.0" prefWidth="600.0" text="Cancel" />
+                           </children>
+                        </HBox>
+                     </children>
+                  </VBox>
+               </children>
+            </VBox>
+           
+         </children>
+      </VBox>
+   </children>
+</AnchorPane>
