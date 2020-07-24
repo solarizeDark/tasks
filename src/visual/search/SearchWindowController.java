@@ -38,6 +38,8 @@ public class SearchWindowController {
     private TableView resultTable;
     @FXML
     private Button cancelButton;
+    @FXML
+    private Button deleteButton;
     public SearchWindowController(DBManager dbManager) {
         this.dbManager = dbManager;
     }
@@ -47,6 +49,7 @@ public class SearchWindowController {
 
         searchButton.setOnAction(e -> search());
         cancelButton.setOnAction(e -> cancel());
+        deleteButton.setOnAction(e -> delete());
 
         dateColumn.setCellValueFactory(new PropertyValueFactory<>("date"));
         textColumn.setCellValueFactory(new PropertyValueFactory<>("text"));
@@ -80,6 +83,12 @@ public class SearchWindowController {
     public void cancel() {
         Stage stage = (Stage) cancelButton.getScene().getWindow();
         stage.close();
+    }
+
+    public void delete() {
+        Task temp = tableTasks.getSelectionModel().getSelectedItem();
+        dbManager.delete(temp);
+        tableTasks.getItems().remove(temp);
     }
 
     public void search() {

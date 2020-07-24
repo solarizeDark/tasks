@@ -12,12 +12,12 @@ import java.util.Date;
 public enum DBManager {
 
     INSTANCE;
-
     private static final String PATH = "jdbc:sqlite:task.db";
     //language=SQL
     private static final String SQL_SELECT_ALL = "select * from task";
     private static final String SQL_INSERT = "insert into task(date, text, status) values (?, ?, ?)";
     private static final String SQL_UPDATE = "update task set date = ?, text = ?, status = ? where id = ?";
+    private static final String SQL_DELETE = "delete from task where id = ?";
     private static final String SQL_SELECT_WITH_CONDITION = "select * from task where status = ?";
 
 
@@ -68,6 +68,19 @@ public enum DBManager {
             preparedStatement.setLong(4, task.getId());
             preparedStatement.execute();
 
+        } catch (SQLException e) {
+            throw new IllegalArgumentException(e);
+        } finally {
+            if (preparedStatement != null) try { preparedStatement.close(); } catch (SQLException e) {}
+        }
+    }
+
+    public void delete(Task task) {
+        PreparedStatement preparedStatement = null;
+        try {
+            preparedStatement = connection.prepareStatement(SQL_DELETE);
+            preparedStatement.setLong(1, task.getId());
+            preparedStatement.execute();
         } catch (SQLException e) {
             throw new IllegalArgumentException(e);
         } finally {

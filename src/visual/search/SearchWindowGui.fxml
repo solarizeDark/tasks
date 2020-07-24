@@ -51,7 +51,8 @@
                      <children>
                         <HBox prefHeight="100.0" prefWidth="200.0">
                            <children>
-                              <Button fx:id="cancelButton" mnemonicParsing="false" prefHeight="50.0" prefWidth="600.0" text="Cancel" />
+                              <Button fx:id="deleteButton" mnemonicParsing="false" prefHeight="80.0" prefWidth="304.0" text="Delete" />
+                              <Button fx:id="cancelButton" layoutX="10.0" layoutY="10.0" mnemonicParsing="false" prefHeight="73.0" prefWidth="298.0" text="Cancel" />
                            </children>
                         </HBox>
                      </children>
